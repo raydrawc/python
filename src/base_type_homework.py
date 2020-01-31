@@ -14,7 +14,6 @@ y = 6
 print(x/y, x//y)
 print(divmod(x,y))
 
-
 # %%
 # 3. 输出结果为: 3.14 3
 x = 3.1415926
@@ -24,12 +23,23 @@ print(round(x,2), round(x))
 # 操作题
 s = "python is a good language"
 
+print(s)
 print(s[:6])
-print(s[:-18])
+print(s[:-(len(s) - 6)])
 
-print(s[0].upper() + s[1:])
+s1 = s.split(' ')
+s2 = []
+for i in s1 :
+    if len(i) > 1 :
+        s2.append(i[0].upper() + i[1:])
+    else:
+        s2.append(i[0].upper())
+s2 = " ".join(s2)
+print(s2)
+
 print(s.count("o"))
 print(s.replace("python", "c++"))
+
 s1 = s.split(' ')
 print(s1)
 print("*".join(s1))
