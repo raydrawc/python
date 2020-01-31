@@ -146,4 +146,62 @@ print(word.split(' '))
 print(word.split('o'))
 print(word.split('o',1))
 
+# %% [markdown]
+# str.join(字符序列) 序列的聚合 (str为序列链接符)返回字符串
 # %%
+x1 = ["1", "2", "3", "4", "5"]
+# x1 = [1, 2, 3, 4, 5]
+val = "*".join(x1)
+print(val)
+print(type(val))
+# %% 
+x1 = ["1", "2", "3", "4", "5"]
+# x1 = (1, 2, 3, 4, 5)
+val = "*".join(x1)
+print(val)
+print(type(val))
+# %% 
+x3 = "one two three"
+val = "*".join(x3)
+print(val)
+print(type(val))
+
+# %%
+# str.strip(删除指定字符) 往两端删除指定字符,若遇到非指定字符则搜索停止
+# str.lstrip 左搜索 str.rstrip右搜索
+x = "__asd___"
+print(x.strip("_"))
+print(x.lstrip("_"))
+print(x.rstrip("_"))
+
+# %%
+# str.replace("搜索字符","替换字符",[数量]) 替换字符
+s = "python is pyter"
+print(s.replace("py",""))
+print(s.replace("py", "gg"))
+print(s.replace("py", "iii", 1))
+
+# %%
+# 切换大小写 str.upper() 切换大写  str.lower() 切换小写
+w = "hello world"
+w1 = w.upper()
+w2 = w1.lower()
+print(w)
+print(w1)
+print(w2)
+
+# %%
+# 布尔类型 False True
+print(1 == 2)
+print(1 == 1)
+# any() 其中一个为真则真 all()全部为真则为真
+print(any([False, 0, None, 1])) # False, 0, None 都是表示假或空
+print(all([False, 0, None, 1])) # False, 0, None 都是表示假或空
+
+# 作为掩码实现
+import numpy as np
+x = [1, 3, 2, 5, 17]
+x = np.array(x)
+print(x)
+print(x > 3)
+x[x > 3]
