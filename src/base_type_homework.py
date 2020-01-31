@@ -27,6 +27,7 @@ print(s)
 print(s[:6])
 print(s[:-(len(s) - 6)])
 
+print(s.title())
 s1 = s.split(' ')
 s2 = []
 for i in s1 :
@@ -39,7 +40,6 @@ print(s2)
 
 print(s.count("o"))
 print(s.replace("python", "c++"))
-
 s1 = s.split(' ')
 print(s1)
 print("*".join(s1))
