@@ -1,7 +1,7 @@
 # %% [markdown]
 # # 列表
 # 生产由100以内偶数构成的列表
-lst = list(range(2, 101, 2))
+lst = list(range(0, 101, 2))
 print(lst)
 
 # %%
@@ -17,10 +17,13 @@ print(ls[1::2])
 print(ls[::-1])
 
 # %% [markdown]
-# 新增"CHERY"在头部
-cars = ["CHERY", "BYD", "GEELY"] # 对列表cars依次执行以下列表操作:
+cars = ["BYD", "GEELY"] # 对列表cars依次执行以下列表操作:
 # 在列表结尾增加元素 "TOYOTA"
 cars.append("TOYOTA")
+print(cars)
+
+# 在"BYD" 和"GEELY"间插入"CHERRY"
+cars.insert(1, "CHERRY")
 print(cars)
 
 # 在列表结尾增加["BMW", "BENZ"]中的元素
@@ -141,16 +144,13 @@ vegetables.add("eggplant")
 print(vegetables)
 
 # 两个集合中,哪些即属于蔬菜又属于水果
-print(vegetables & fruits)
+print(vegetables & fruits) # 交集
 
 # 两个集合中,所有的蔬菜和水果有哪些
-print(vegetables | fruits)
+print(vegetables | fruits) # 并集
 
 # 两个集合中,哪些只属于蔬菜或者只属于水果
-print(vegetables ^ fruits)
+print(vegetables ^ fruits) # 异或
 
 # 两个集合中,哪些只属于蔬菜
-print(vegetables - fruits)
-
-
-# %%
+print(vegetables - fruits) # 差集
